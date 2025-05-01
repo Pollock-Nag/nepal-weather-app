@@ -1,0 +1,72 @@
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    .card {
+        background: transparent;
+        border-radius: 30px;
+        width: 300px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        margin-top: 8vh;
+
+        .image-section {
+            padding: 8px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+     }
+  
+    .text-section {
+      padding: 30px 20px;
+
+      .text {
+        font-size: 30px;
+        margin-bottom: 20px;
+
+        .white-text {
+          color: #ffffff;
+          font-weight: bold;
+        }
+
+        .yellow-text {
+          color: #f5c518;
+          font-weight: bold;
+        }
+      }
+
+      .get-start-btn {
+        background-color: #f5c518;
+        color: #1b1b3a;
+        border: none;
+        padding: 10px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: #d4a815;
+        }
+      }
+    }
+
+    mat-form-field {
+        position: relative; // Try this first
+    }
+
+    ::ng-deep .mat-select-panel {
+  top: auto !important;
+  bottom: auto !important;
+  // Add other positioning styles as needed
+}
+}
