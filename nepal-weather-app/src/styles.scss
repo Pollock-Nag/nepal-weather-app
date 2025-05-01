@@ -1,11 +1,26 @@
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-// theme=deeppurple-amber
+// @import "~@angular/material/prebuilt-themes/purple-green.css";
+
+@import '@angular/material/theming';
+@include mat-core();
+
+$my-primary: mat-palette($mat-deep-purple, 300);  // Change this to desired color
+$my-accent: mat-palette($mat-light-green, A200);
+$my-warn: mat-palette($mat-red);
+
+$my-light-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
+$my-dark-theme: mat-dark-theme($my-primary, $my-accent, $my-warn);
+// $my-theme: mat-typography($my-theme, $font-family: 'Poppins', $font-size: 16px, $line-height: 1.5, $letter-spacing: 0.5px);
+
+@include angular-material-theme($my-dark-theme);
+
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  
+  background: linear-gradient(180deg, #20284Dff, #302F5Dff, #40356Cff, #513C7Cff, #61438Cff, #71499Bff, #61438c);
 }
 
 app-root {
