@@ -1,6 +1,12 @@
 <div class="body">
-  <app-landing-page></app-landing-page>
-  <!-- <app-home-page></app-home-page> -->
+  <app-landing-page 
+    *ngIf="isLandingPage"
+    (showHomePage)="showHomePage()"
+  ></app-landing-page>
+  <app-home-page
+    *ngIf="!isLandingPage"
+    (backBtnClick)="showLandingPage()"
+  ></app-home-page>
 
 
 </div>

@@ -1,0 +1,77 @@
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  
+  .card {
+    background: transparent;
+    border-radius: 30px;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 8vh;
+
+    .image-section {
+      padding: 8px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 22px;
+      }
+    }
+  }
+  
+  .text-section {
+    padding: 30px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+
+      .white-text {
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .yellow-text {
+        color: #f5c518;
+        font-weight: bold;
+      }
+    }
+
+    .get-start-btn {
+      background-color: #f5c518;
+      color: #1b1b3a;
+      border: none;
+      padding: 12px 35px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 8px;
+
+      &:hover {
+        background-color: #d4a815;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  }
+
+::ng-deep .mat-mdc-select-panel {
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #e6dfc9 #1b1b3a !important;
+}

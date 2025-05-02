@@ -1,1 +1,25 @@
-<p>home-page works!</p>
+<div class="landing-page">
+  <div class="card">
+    <div class="image-section">
+      <img
+        [src]="isSunny ? sunnyImage : rainyImage"
+        alt="Weather Image"
+        class="weather-image"
+      />
+    </div>
+  </div>
+  <div class="text-section">
+
+    <div class="text">
+      <span class="yellow-text"> Light rain </span>
+      <span class="white-text"> is expected on 2-04-25</span>
+    </div>
+
+    <div class="text">
+      <span class="white-text"> Precipitation: 2 millimeter</span>
+    </div>
+
+
+    <button class="get-start-btn" (click) = "onBackBtnClick()"> Back </button>
+  </div>
+</div>
