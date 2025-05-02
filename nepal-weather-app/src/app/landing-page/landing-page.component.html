@@ -10,7 +10,7 @@
   </div>
   <div class="text-section">
     <div class="text">
-      <span class="white-text">Nepal Weather</span>
+      <span class="white-text">Nepal Precipitation</span>
       <span class="yellow-text"> Forecasts</span>
     </div>
 
@@ -18,7 +18,12 @@
       <!-- date picker -->
       <mat-form-field appearance="outline" class="custom-field">
         <mat-label>Pick a date</mat-label>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date" />
+        <input 
+          matInput
+          [(ngModel)]="selectedDate" 
+          [matDatepicker]="picker" 
+          placeholder="Choose a date" 
+        />
         <mat-datepicker-toggle
           matSuffix
           [for]="picker"
@@ -31,16 +36,15 @@
       <mat-form-field appearance="outline" class="custom-field"
       >
         <mat-label>District</mat-label>
-        <mat-select>
-          <mat-option value="kathmandu">Kathmandu</mat-option>
-          <mat-option value="bhaktapur">Bhaktapur</mat-option>
-          <mat-option value="lalitpur">Lalitpur</mat-option>
-          <mat-option value="pokhara">Pokhara</mat-option>
-          <mat-option value="biratnagar">Biratnagar</mat-option>
+        <mat-select [(ngModel)]="selectedDistrict" name="selectedDistrict">
+          <mat-option *ngFor="let district of districts" [value]="district.name">
+            {{ district.name }}
+          </mat-option>
+
         </mat-select>
       </mat-form-field>
     </div> 
 
-    <button class="get-start-btn" (click) = "getWeatherData()">Get Started</button>
+    <button class="get-start-btn" (click) = "getWeatherData()"> Search </button>
   </div>
 </div>

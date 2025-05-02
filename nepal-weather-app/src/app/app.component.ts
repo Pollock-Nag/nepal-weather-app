@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nepal-weather-app';
-  isLandingPage: boolean = false;
+  isLandingPage: boolean = true;
 
   showLandingPage() {
     this.isLandingPage = true;

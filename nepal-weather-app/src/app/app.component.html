@@ -1,12 +1,31 @@
-<div class="body">
-  <app-landing-page 
-    *ngIf="isLandingPage"
-    (showHomePage)="showHomePage()"
-  ></app-landing-page>
-  <app-home-page
-    *ngIf="!isLandingPage"
-    (backBtnClick)="showLandingPage()"
-  ></app-home-page>
+<div class="page-container">
+  <div class="content-wrap">
+    <div class="body">
+      <app-landing-page 
+        *ngIf="isLandingPage"
+        (showHomePage)="showHomePage()"
+      ></app-landing-page>
+      <app-home-page
+        *ngIf="!isLandingPage"
+        (backBtnClick)="showLandingPage()"
+      ></app-home-page>
+    </div>
+  </div>
 
-
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>
+        &copy; 2025 Nepal Precipitation Forecast App. All rights reserved by
+        <a
+          href="https://www.linkedin.com/in/pollock-nag-232149239/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="linkedin-link"
+        >
+          Pollock Nag
+        </a>
+      </p>
+    </div>
+  </footer>
 </div>
